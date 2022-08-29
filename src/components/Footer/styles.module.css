@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
-    padding: 0 4rem;
+    padding: 1rem;
     background-color: #6c63ff;
     color: #F0F0F0;
-    margin-top: auto;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
 }
 
 .link {
@@ -20,14 +21,6 @@
 }
 
 .link svg {
-    height: 2rem;
-    width: 2rem;
-}
-
-footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    margin-top: 1rem;
-    z-index: 10;
+    height: 2.4rem;
+    width: 2.4rem;
 }
