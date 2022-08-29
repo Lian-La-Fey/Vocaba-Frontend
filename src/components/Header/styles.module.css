@@ -2,7 +2,6 @@
   display: flex;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  /* height: 10vh; */
   padding: 0 6rem !important;
   z-index: 10;
   justify-content: space-between;
@@ -12,8 +11,7 @@
 
 .headerItem {
   display: flex;
-  height: 10vh;
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
   flex-shrink: 0;
   align-items: center;
 }
@@ -37,7 +35,6 @@
 
 .navbarLink:hover {
   color: var(--main-link-hover-color);
-  
 }
 
 .logo {
@@ -89,10 +86,6 @@
 @media (max-width: 576px) {
   .header {
     padding: 0 !important;
-  }
-
-  .headerItem {
-    padding: 0 0.5rem;
   }
 
   .logo {

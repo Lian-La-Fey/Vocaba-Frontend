@@ -86,9 +86,13 @@
     background-color: #756eff;
     color: #f0f0f0;
 }
-.imgMaxH {
-    max-height: 40vh;
+
+@media (max-width: 1200px) {
+    .imgMaxH {
+        max-height: 40vh;
+    }
 }
+
 
 @media (max-width: 992px) {
     .title {
