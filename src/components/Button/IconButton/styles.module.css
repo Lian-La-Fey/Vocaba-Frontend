@@ -1,0 +1,18 @@
+.btnIcon {
+  background: none;
+  outline: 0;
+  border: 0;
+}
+
+.btnIcon svg {
+  height: 1.6rem;
+  width: 1.6rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: var(--main-text-color);
+  pointer-events: none;
+}
+
+.btnIcon:hover svg {
+  color: #8079fc;
+}

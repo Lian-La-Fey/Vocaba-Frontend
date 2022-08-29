@@ -1,0 +1,35 @@
+.link {
+  color: var(--main-link-hover-color);
+}
+
+.link:hover {
+  color: #8c1aff;
+}
+
+.titleSvg {
+  margin: 0 2rem;
+  color: var(--main-link-hover-color);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.wordSvg {
+  margin-right: 2rem;
+  color: var(--main-link-hover-color);
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+
+.wrapper h2,
+.wrapper h1 {
+  color: var(--main-text-color);
+}

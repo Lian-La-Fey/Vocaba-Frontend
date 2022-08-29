@@ -1,0 +1,119 @@
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.inputDiv {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin: 1rem 0;
+    background-color: #f0f0f0;
+    height: 5rem;
+    border-radius: 5rem;
+    padding: 0 0.5rem;
+    max-width: 380px;
+    width: 95%;
+}
+
+.inputDiv .inputIcon {
+    color: #6c63ff;
+    margin-left: .5rem;
+    width: 2rem;
+    height: 5rem;
+}
+
+.inputDiv input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.btnInp {
+    font-size: 2rem;
+    width: 150px;
+    background-color: #6c63ff;
+    border: none;
+    outline: none;
+    height: 5rem;
+    border-radius: 5rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.btnInp:hover {
+    background-color: #756eff;
+    color: #fff;
+}
+
+.registerLoad {
+    margin-left: 1rem;
+    color: var(--main-link-color);
+}
+
+.registerLoad:hover {
+    color: var(--main-link-hover-color);
+}
+
+
+.loginForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2.5rem;
+}
+
+.warning {
+    background-color: #756eff;
+    color: #f0f0f0;
+}
+.imgMaxH {
+    max-height: 40vh;
+}
+
+@media (max-width: 992px) {
+    .title {
+        display: none;
+    }
+    
+    .imgFluid {
+        height: 330px;
+    }
+}
+
+@media(max-width: 576px) {
+    .btnInp {
+        font-size: 1.8rem;
+        width: 150px;
+        height: 4rem;
+        border-radius: 4rem;
+        font-weight: 600;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 320px) {
+    .imgMaxH {
+        max-height: 35vh;
+    }
+}

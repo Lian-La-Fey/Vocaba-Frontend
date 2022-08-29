@@ -1,0 +1,88 @@
+.cardDiv {
+  z-index: 2;
+  position: relative;
+  color: var(--main-text-color);
+}
+
+.titleSvg {
+  color: var(--main-link-hover-color);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.wordSvg {
+  margin-top: .4rem;
+  margin-right: 1.8rem;
+  color: var(--main-link-hover-color);
+  width: 1.8rem;
+  height: 1.8rem;
+  min-width: fit-content;
+}
+
+.definitions {
+  margin-left: 0 !important;
+}
+
+.definitionItem {
+  margin-top: 2.5rem;
+}
+
+.definitionItem:first-child {
+  margin-top: 0;
+}
+
+.definitionWrapper {
+  display: inline-flex;
+  /* align-items: baseline; */
+}
+
+.definitionWrapper p {
+  margin: 0;
+}
+
+.definition {
+  font-weight: 500;
+  margin-left: -0.5rem;
+}
+
+.examples {
+  font-style: normal;
+  margin-top: 1rem;
+  padding-left: 3rem;
+}
+
+.examples span {
+  color: var(--sec-text-color);
+}
+
+.examples span strong {
+  color: var(--main-text-color);
+}
+
+.example {
+  display: flex;
+  margin-bottom: .5rem;
+}
+
+.example svg {
+  margin-right: 1.2rem;
+}
+
+.example p {
+  color: var(--sec-text-color);
+  font-weight: 500;
+  margin-bottom: 0;
+  opacity: .95;
+}
+
+@media (max-height: 670px) {
+  
+  .definitions {
+    padding-left: 1rem;
+  }
+  
+  .examples {
+    margin-top: 1rem;
+    padding-left: 2.2rem;
+  }
+}

@@ -1,0 +1,159 @@
+.wordBtnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.clipContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--main-bg-color);
+  width: max-content !important;
+}
+
+.clipNew {
+  margin-top: 1.5rem;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 1rem;
+  height: 400px;
+  max-width: 720px;
+  background-color: rgb(6, 6, 6);
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.caroPass {
+  position: absolute;
+  z-index: 1;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+  color: hsl(243, 50%, 69%);
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+  margin: 0.5rem;
+}
+
+.caroRight {
+  right: 2%;
+}
+
+.caroLeft {
+  left: 2%;
+}
+
+.caroPass:hover {
+  opacity: 1;
+}
+
+.caroToggle {
+  width: 5.4rem;
+  height: 4.8rem;
+  padding: 1.6rem;
+  opacity: 1;
+  background-color: rgb(43, 43, 43);
+  border-radius: 1rem;
+}
+
+.caroToggle:hover {
+  border: 2px solid var(--main-link-hover-color);
+  padding: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+
+.caroIndicator {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: 15%;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+  list-style: none;
+}
+
+.caroIndicatorBtn {
+  width: 3rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background-color: hsl(243, 50%, 69%);
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  padding: 0;
+  text-indent: -999px;
+  cursor: pointer;
+  background-clip: padding-box;
+  border: 0;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: 0px;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  transition: opacity 0.6s ease;
+}
+/* 1.8 */
+@media (max-width: 992px) {
+  .clipNew {
+    height: 360px;
+    max-width: 648px;
+    background-color: rgb(6, 6, 6);
+  }
+}
+
+@media (max-width: 768px) {
+  .clipNew {
+    height: 300px;
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 576px) {
+  .clipNew {
+    height: 260px;
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .clipNew {
+    height: 200px;
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 360px) {
+  .clipNew {
+    height: 160px;
+    max-width: 90vw;
+  }
+}

@@ -1,0 +1,33 @@
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    padding: 0 4rem;
+    background-color: #6c63ff;
+    color: #F0F0F0;
+    margin-top: auto;
+}
+
+.link {
+    margin: 0 2rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.link:hover {
+    color: #f6f9fc;
+}
+
+.link svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-top: 1rem;
+    z-index: 10;
+}

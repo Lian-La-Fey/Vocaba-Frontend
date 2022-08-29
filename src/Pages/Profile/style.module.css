@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  padding: 0 !important;
+  
+}
+
+.card {
+  height: inherit !important;
+  width: 100%;
+  border: none;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin-bottom: 1.6rem;
+  background-color: var(--card-bg-color) !important;
+  color: var(--main-text-color);
+}
+
+.upperImg {
+  background-color: var(--card-bg-color);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.profileDiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: 80px;
+}
+
+.profile {
+  position: absolute;
+  top: -35%;
+  height: 80px;
+  width: 80px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: whitesmoke;
+}
+
+.lower {
+  text-align: center;
+  margin-top: -3rem;
+}
+
+.lower h2 {
+  color: var(--main-text-color);
+}
+
+.stats {
+  font-size: 2rem;
+  color: var(--main-text-color);
+}
+
+.inputDiv {
+  position: relative;
+  width: fit-content;
+}
+
+.inputDiv input {
+  height: 5rem;
+  padding-left: 4rem;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid #6c63ff !important;
+  background-color: var(--card-bg-color);
+  color: var(--main-text-color);
+}
+
+.inputIcon {
+  position: absolute;
+  top: calc(50% - 0.5625rem);
+  left: 1rem;
+  pointer-events: none;
+  color: var(--main-link-hover-color);
+}
+
+.colPad {
+  padding: 0 1.5rem !important;
+}
+
+@media(min-width: 1250px) {
+  .profileDiv {
+    height: 120px;
+  }
+  
+  .profile {
+    top: -50%;
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media(max-width: 768px) {
+  .mobCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .colPad {
+    padding: 0;
+  }
+}

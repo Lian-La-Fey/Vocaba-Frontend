@@ -1,0 +1,18 @@
+.spinnerWrapper {
+  display: flex;
+  justify-content: center;
+  padding-left: 30rem !important;
+}
+
+@media (max-width: 1200px) {
+  .spinnerWrapper {
+    padding-left: 5rem !important;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .spinnerWrapper {
+    padding: 0 1rem !important;
+  }
+}

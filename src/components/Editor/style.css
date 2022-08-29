@@ -1,0 +1,46 @@
+.ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
+  border: none;
+  box-shadow: none;
+}
+
+.ck.ck-editor__editable_inline {
+  border: none;
+}
+
+.ck-content {
+  border: 0 0 0 0 !important;
+  border-bottom: 2px solid var(--main-link-hover-color) !important;
+  padding: 0 !important;
+  /* padding-bottom: 1rem !important; */
+}
+
+.ck-content p {
+  margin: 0 !important;
+}
+
+.form-field[name="editor-examples"] .ck-content p {
+  margin: 0px 0px 0.5rem 0px !important;
+  margin-left: 1.8rem !important;
+}
+
+.form-field[name="editor-examples"] .ck-content p::before {
+  content: url("../../img/angle-right.svg");
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  left: 0;
+  /* padding-right: 1rem; */
+}
+
+/* .ck-balloon-rotator__content,
+.ck .ck-balloon-rotator,
+.ck.ck-balloon-panel {
+  background: var(--ck-color-base-foreground) !important;
+} */
+
+.ck.ck-balloon-panel.ck-toolbar-container[class*="arrow_n"]:after {
+  border-bottom-color: var(--ck-color-base-foreground);
+}
+.ck.ck-balloon-panel.ck-toolbar-container[class*="arrow_s"]:after {
+  border-top-color: var(--ck-color-base-foreground);
+}

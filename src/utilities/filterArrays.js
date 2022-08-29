@@ -1,0 +1,1 @@
+export const filterArray = (item) => item !== undefined && item !== ""

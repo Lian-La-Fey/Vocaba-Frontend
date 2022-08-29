@@ -1,0 +1,79 @@
+.skeleton {
+  background: var(--main-skeleton-bg-color);
+  overflow: hidden;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+.skeleton.text {
+  width: 100%;
+  height: 1.2rem;
+}
+.skeleton.title {
+  width: 50%;
+  height: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+.skeleton.avatar {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
+
+.skeleton-wrapper {
+  /* margin: 20px auto; */
+  /* padding: 1rem 1rem; */
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* skeleton profile */
+.skeleton-profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+/* animation effects */
+.shimmer-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: loading 2.5s infinite;
+}
+.shimmer {
+  width: 50%;
+  height: 100%;
+  background: var(--card-bg-color);
+  transform: skewX(-20deg);
+  box-shadow: 0 0 30px 30px var(--card-bg-color);
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+@media(max-width: 992px) {
+  .skeleton-profile {
+    grid-template-columns: 3fr 1fr;
+    grid-gap: .8rem;
+  }
+  .skeleton-profile .skeleton.text {
+    display: none;
+  }
+  
+  .skeleton-profile .skeleton.title {
+    width: 1rem;
+  }
+}

@@ -1,0 +1,21 @@
+.content {
+  height: 90vh;
+  width: 100%;
+  padding-left: 32rem !important;
+  padding-right: 2rem !important;
+  overflow-y: auto;
+  transition: all 500ms ease-in-out;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    padding-left: 7rem !important;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 1rem !important;
+  }
+}

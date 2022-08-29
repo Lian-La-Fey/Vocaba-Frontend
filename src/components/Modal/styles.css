@@ -1,0 +1,15 @@
+.modal-content,
+.modal-content input,
+.modal-content input:focus,
+.modal-content .btn-close {
+  color: var(--main-text-color) !important;
+  background-color: var(--main-bg-color) !important;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}

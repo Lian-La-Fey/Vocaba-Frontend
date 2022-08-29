@@ -1,0 +1,166 @@
+.stat {
+  display: flex;
+  align-items: center;
+  background-color: var(--card-bg-color) !important;
+  color: var(--main-text-color) !important;
+  font-weight: 500;
+  padding: 1.5rem 2rem;
+  min-width: max-content;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.stat svg, .card svg {
+  height: 2.8rem;
+  width: 2.8rem;
+  margin-right: 1.25rem;
+  color: var(--main-link-hover-color);
+  
+}
+
+.card {
+  background-color: var(--card-bg-color) !important;
+  color: var(--main-text-color) !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border: none !important;
+}
+
+.cardTitle {
+  color: var(--main-headings-color);
+  font-weight: 600;
+}
+
+.agendaTable tbody, 
+.agendaTable td, 
+.agendaTable tfoot, 
+.agendaTable th, 
+.agendaTable thead, 
+.agendaTable tr {
+  border: none;
+}
+
+.agendaTable th {
+  color: var(--main-link-hover-color);
+}
+
+.agendaTable th:first-child {
+  width: 125px;
+}
+
+.agendaTable td {
+  color: var(--main-text-color);
+  font-weight: 500;
+  
+}
+
+/* .agendaTable tr td:last-child {
+  text-align: center;
+} */
+
+.circleSvg {
+  padding: .2rem;
+  border: 2px solid var(--main-link-hover-color);
+  border-radius: 2.8rem;
+  min-width: fit-content;
+}
+
+.task {
+  color: var(--main-text-color) !important;
+  margin-bottom: 1rem;
+}
+
+.task .card-header svg {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: none !important;
+  color: var(--sec-link-color);
+}
+
+.task a {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--main-text-color);
+  transition: all .3s;
+}
+
+.task svg {
+  transition: all .3s;
+  color: var(--sec-link-color);
+}
+
+.task a:hover,
+.task a:hover svg {
+  transition: .3s;
+  color: var(--main-link-color);
+}
+
+.noTask svg {
+  color: var(--main-text-color);
+}
+
+.month {
+  display: flex;
+}
+
+.monthCol {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.8rem;
+  height: 3rem;
+}
+
+.monthCol[name="month"] {
+  justify-content: center;
+  width: 8.5rem;
+}
+
+.month svg {
+  margin: 0 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  opacity: .3;
+  color: var(--main-text-color);
+  cursor: pointer;
+}
+
+.month svg:hover {
+  color: var(--main-link-hover-color);
+} 
+
+.agendaTable svg {
+  color: var(--main-text-color);
+  border-color: var(--main-text-color);
+}
+
+@media(min-width: 768px) {
+  .card .cardHeader {
+    min-height: 95px;
+  }
+  
+  .agendaTable th:first-child {
+    width: 210px;
+  }
+  
+}
+
+@media(min-width: 1435px) {
+  .card .cardHeader {
+    min-height: 50px;
+  }
+}
+
+@media(max-width: 360px) {
+  .stat {
+    min-width: fit-content;
+  }
+  
+  .agendaTable svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  
+  .agendaTable th:first-child {
+    width: 105px;
+  }
+}

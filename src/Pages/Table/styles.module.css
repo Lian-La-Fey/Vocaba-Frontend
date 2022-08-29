@@ -1,0 +1,138 @@
+.modal {
+  color: var(--main-text-color) !important;
+  background-color: var(--card-bg-color) !important;
+}
+
+.tableCard {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+  background-color: var(--card-bg-color);
+  min-height: 82vh;
+}
+
+.tableCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-bottom: 1px solid var(--main-link-hover-color);
+}
+
+.cardTitle {
+  font-size: 2.4rem;
+  color: var(--main-headings-color);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.cardTitle svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.newInput {
+  border: none;
+  border-bottom: 2px solid #6c63ff;
+  outline: 0;
+  color: var(--main-text-color);
+  background-color: var(--card-bg-color);
+}
+
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3.2rem;
+  color: #FFF;
+  font-size: 2.4rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  border: none;
+  background: #6c63ff;
+}
+
+.listFormIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: var(--main-text-color);
+}
+
+.listFormIcon:hover {
+  color: #8079fc;
+}
+
+.listText {
+  color: var(--main-text-color);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tablePadding {
+  padding: 2rem 2.5rem !important;
+}
+
+.listTable tr {
+  border-bottom: 2px solid var(--main-border-color) !important;
+}
+
+.listTable th {
+  color: var(--main-link-hover-color);
+}
+
+.listTable td {
+  color: var(--main-text-color);
+}
+
+.listTable th:first-child {
+  width: 120px;
+}
+
+.listTable tbody tr:hover {
+  transition: background-color .4s;
+  background: var(--main-bg-hover-color);
+}
+
+.listTable tbody tr a:hover {
+  transition: all .4s;
+  color: var(--main-link-hover-color);
+}
+
+
+@media(max-width: 576px) {
+  
+  .tablePadding {
+    padding: 1.5rem 2rem !important;
+  }
+  
+  .listTable th:first-child {
+    width: 60px;
+  }
+  
+  .listTable th:last-child {
+    width: 90px;
+  }
+  
+  .tableCardHeader {
+    padding: 1rem 2rem;
+  }
+}
+
+@media(max-width: 400px) {
+  .newInput {
+    width: 75%;
+  }
+  
+  .newListForm {
+    width: 50%;
+  }
+  
+  .tableCardHeader {
+    padding-right: .5rem;
+  }
+}

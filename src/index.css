@@ -1,13 +1,167 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --main-bg-color: #fff;
+  --main-bg-hover-color: #f9f9fa;
+  --card-bg-color: #ffffff;
+  --select-bg-color: #f8f8f8;
+  --main-text-color: #353535;
+  --sec-text-color: #494949;
+  --main-border-color: hsl(243, 100%, 94%);
+  --sec-border-color: hsl(243, 100%, 75%);
+  --main-link-color: hsl(243, 100%, 69%);
+  --main-link-hover-color: hsl(243, 70%, 69%);
+  --sec-link-color: hsl(240, 6%, 48%);
+  --sec-link-hover-color: hsl(243, 85%, 69%);
+  --main-headings-color: #435065;
+  --main-skeleton-bg-color: #ddd;
+  --ck-color-text: var(--main-link-color);
+  --ck-color-base-foreground: #f9f9fa;
+  --ck-color-toolbar-background: #f9f9fa;
+  --ck-color-button-default-hover-background: #e6e6e6;
+  --ck-color-button-default-active-background: #d9d9d9;
+  --ck-z-modal: calc(var(--ck-z-default) + 10);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.darkTheme {
+  --main-bg-color: #242424;
+  --main-bg-hover-color: #282828;
+  --card-bg-color: #2e2e2e;
+  --select-bg-color: var(--main-bg-color);
+  --main-text-color: #dcdcdc;
+  --sec-text-color: #bfbfbf;
+  --main-border-color: hsl(243, 9%, 51%);
+  --sec-border-color: hsl(243, 91%, 68%);
+  --main-link-color: hsl(243, 100%, 69%);
+  --main-link-hover-color: #6c63ff;
+  --sec-link-color: hsl(243, 10%, 69%);
+  --sec-link-hover-color: hsl(243, 85%, 69%);
+  --main-headings-color: #e1dfdf;
+  --main-skeleton-bg-color: #4b4b4b;
+  --toastify-color-light: var(--main-bg-color);
+  --toastify-text-color-light: var(--main-text-color);
+  --ck-color-text: var(--main-link-color);
+  --ck-color-base-foreground: #282828;
+  --ck-color-toolbar-background: #282828;
+  --ck-color-button-default-hover-background: #373737;
+  --ck-color-button-default-active-background: #545454;
+  --ck-color-button-on-background: #373737;
+  --ck-color-button-on-hover-background: #545454;
+  --ck-color-button-on-active-background: hsl(243, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  background-color: var(--main-bg-color);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem !important;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--main-bg-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-link-color);
+}
+
+a:hover {
+  color: var(--main-link-hover-color);
+}
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: -internal-light-dark(
+    rgb(232, 240, 254),
+    rgba(70, 90, 126, 0.4)
+  ) !important;
+  color: fieldtext !important;
+  transition: 99999999999999s;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(204, 103, 255, 0.4);
+  -webkit-box-shadow: inset 0 0 6px rgba(114, 76, 76, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(197, 82, 255, 0.549);
+}
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+.form-control {
+  font-size: 1.6rem;
+}
+
+.Toastify__close-button--light {
+  color: var(--main-text-color);
+}
+/*  */
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--main-link-hover-color);
+}
+
+@media (max-width: 1400px) {
+  .hide-b-xll {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .hide-b-lg {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-b-md {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 8px;
+  }
 }

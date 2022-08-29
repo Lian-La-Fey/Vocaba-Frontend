@@ -1,0 +1,20 @@
+.wCard {
+  background-color: var(--card-bg-color) !important;
+  color: var(--main-text-color) !important;
+}
+
+.cardHeader {
+  text-align: center;
+  justify-content: center;
+  /* background-color: hsl(243, 49%, 69%); */
+}
+
+.wordCol {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+}
+

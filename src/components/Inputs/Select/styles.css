@@ -1,0 +1,48 @@
+.filter__control {
+  border: none !important;
+  border-bottom: 2px solid var(--main-link-hover-color) !important;
+  border-radius: 0 !important;
+  background-color: var(--card-bg-color) !important;
+}
+
+.filter__control--is-focused {
+  box-shadow: none !important;
+  background-color: var(--card-bg-color) !important;
+}
+
+.filter__multi-value {
+  border-radius: 4px !important;
+  border: 2px solid var(--main-link-hover-color);
+  background-color: var(--select-bg-color) !important;
+}
+
+.filter__multi-value__label {
+  color: var(--main-text-color) !important;
+}
+
+.filter__multi-value__remove:hover {
+  background-color: var(--main-link-hover-color) !important;
+  color: #FFF !important;
+}
+
+.filter__menu {
+  margin: 0.125rem auto;
+  background-color: var(--card-bg-color) !important;
+}
+
+.filter__option {
+  background-color: var(--card-bg-color) !important;
+}
+
+.filter__option--is-focused {
+  background-color: var(--card-bg-color) !important;
+}
+
+.filter__option--is-focused:hover {
+  background-color: var(--main-bg-hover-color) !important;
+}
+
+.filter__group {
+  padding: 0;
+}
+

@@ -1,0 +1,138 @@
+.dropdown {
+  position: relative;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdownAvatar {
+  display: flex;
+  width: 4.8rem;
+  height: 4.8rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #8079fc;
+  color: #e6e4ff;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.dropdownText {
+  margin-left: 1rem;
+  color: var(--main-text-color);
+}
+
+.dropdownOverlayer {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dropdownContent {
+  position: absolute;
+  z-index: 5;
+  top: 101%;
+  display: none;
+  overflow-y: hidden;
+  right: -1%;
+  min-width: 100%;
+  width: max-content;
+  background: var(--card-bg-color);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.open {
+  display: block;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navItem {
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+.navItem:last-child {
+  border-bottom: none;
+}
+
+.navbarLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  line-height: 1.125;
+  padding: 1.5rem;
+  color: var(--sec-link-color);
+  text-decoration: none !important;
+  font-size: 1.8rem !important;
+  transition: all 300ms ease-in-out;
+  min-width: max-content;
+}
+
+.navbarLink:hover {
+  color: var(--sec-link-hover-color);
+}
+
+.navbarLink svg {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1.2rem;
+}
+
+.linkContainer {
+  font-size: 1.6rem;
+}
+
+.linkContainer svg {
+  display: none;
+  height: 2rem;
+  width: 2rem;
+}
+
+.linkContainer a {
+  margin-left: 1rem;
+}
+
+@media (max-width: 992px) {
+  .hiddenLg {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdownContent {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    min-width: auto;
+    height: 100%;
+    display: block;
+    border-width: 0 0 0 0.0625rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.5s ease-in-out;
+    width: 0vw;
+  }
+  
+  .open {
+    width: 90vw;
+  }
+  
+  .displayMd {
+    display: block !important;
+  }
+  
+}

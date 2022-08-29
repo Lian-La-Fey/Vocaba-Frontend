@@ -1,0 +1,30 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  border: 1px solid var(--main-link-hover-color);
+  background-color: var(--main-card-bg-color);
+  outline: none;
+  height: 3rem;
+  border-radius: 1.5rem;
+  color: var(--main-link-hover-color);
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  z-index: 4;
+  padding: 0 1rem;
+  min-width: 90px;
+}
+
+.btn:hover {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.btn:hover a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
