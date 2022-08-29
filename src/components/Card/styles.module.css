@@ -14,9 +14,8 @@
   margin-top: .4rem;
   margin-right: 1.8rem;
   color: var(--main-link-hover-color);
-  width: 1.8rem;
-  height: 1.8rem;
-  min-width: fit-content;
+  min-width: 1.8rem;
+  min-height: 1.8rem;
 }
 
 .definitions {

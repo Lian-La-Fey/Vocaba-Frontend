@@ -11,8 +11,8 @@
 }
 
 .stat svg, .card svg {
-  height: 2.8rem;
-  width: 2.8rem;
+  min-height: 2.8rem;
+  min-width: 2.8rem;
   margin-right: 1.25rem;
   color: var(--main-link-hover-color);
   
@@ -53,15 +53,10 @@
   
 }
 
-/* .agendaTable tr td:last-child {
-  text-align: center;
-} */
-
 .circleSvg {
   padding: .2rem;
   border: 2px solid var(--main-link-hover-color);
   border-radius: 2.8rem;
-  min-width: fit-content;
 }
 
 .task {
@@ -70,8 +65,8 @@
 }
 
 .task .card-header svg {
-  width: 2.8rem;
-  height: 2.8rem;
+  min-width: 2.8rem;
+  min-height: 2.8rem;
   border: none !important;
   color: var(--sec-link-color);
 }
@@ -151,10 +146,6 @@
 }
 
 @media(max-width: 360px) {
-  .stat {
-    min-width: fit-content;
-  }
-  
   .agendaTable svg {
     width: 2.4rem;
     height: 2.4rem;

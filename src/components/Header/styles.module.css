@@ -84,23 +84,28 @@
   color: var(--main-link-hover-color);
 }
 
+
+@media (max-width: 768px) {
+  .hide {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .header {
     padding: 0 !important;
   }
 
   .headerItem {
-    padding: 2rem 0.5rem 2rem 1rem;
+    padding: 1rem 0.5rem 1rem 1rem;
   }
 
   .logo {
     font-size: 2.4rem !important;
   }
-}
-
-@media (max-width: 768px) {
-  .hide {
-    display: none;
+  
+  .headerItem:nth-of-type(2) {
+    width: 50%;
   }
 }
 
