@@ -15,9 +15,9 @@ const Definitions = ({ arr, examplesLength }) => {
       {arr.map((item, index) => (
         <li key={index} className={styles.definitionItem}>
           <div className="d-flex align-items-center flex-wrap">
-            <span className={styles.definitionWrapper}>
+            <div className={styles.definitionWrapper}>
               <FaArrowCircleRight className={styles.wordSvg} />
-              <span
+              <div
                 className={styles.definition}
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(item.definition, {
@@ -25,15 +25,17 @@ const Definitions = ({ arr, examplesLength }) => {
                   }),
                 }}
               />
-            </span>
-            <span className="ps-4 d-inline-block">
-              {item.synonyms.length > 0 && (
-                <SynAnt arr={item.synonyms} title="SYN" />
-              )}
-              {item.antonyms.length > 0 && (
-                <SynAnt arr={item.antonyms} title="ANT" />
-              )}
-            </span>
+            </div>
+            {item.synonyms.length + item.antonyms.length > 0 && (
+              <div className="ps-4 d-inline-block">
+                {item.synonyms.length > 0 && (
+                  <SynAnt arr={item.synonyms} title="SYN" />
+                )}
+                {item.antonyms.length > 0 && (
+                  <SynAnt arr={item.antonyms} title="ANT" />
+                )}
+              </div>
+            )}
           </div>
           {item.examples.length > 0 && (
             <Examples arr={item.examples.split("</p>")} n={examplesLength} />
@@ -61,6 +63,7 @@ const SynAnt = ({ arr, title }) => {
 const Examples = ({ arr, n }) => {
   const filteredArr = arr.filter((item) => item); // eliminate ''
   const examples = filteredArr.map((item) => `${item}</p>`);
+  console.log(examples);
   return (
     <ul className={styles.examples}>
       {examples.slice(0, n || examples.length).map((example, index) => (
