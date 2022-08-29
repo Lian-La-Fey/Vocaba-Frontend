@@ -48,8 +48,6 @@ const Agenda = ({ title, arr, month, setMonth }) => {
       def.examples.split("</p>").filter((example) => example !== "").length
     ).reduce((partialSum, a) => partialSum + a, 0)
   );
-  
-  console.log(examples);
 
   const generateStatement = (progress) => {
     if (progress < 2) return "Add new examples";

@@ -32,7 +32,7 @@ const List = () => {
             <Col key={word._id} xl={10} className="mt-4 p-4">
               <WordCard
                 word={word}
-                examplesLength={word.definitions.length > 1 ? 2 : 3}
+                examplesLength={word.definitions.length > 1 ? 1 : 2}
               >
                 <Link to={`/word/${word._id}`} className={styles.link}>
                   More Detail...

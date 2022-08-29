@@ -4,8 +4,6 @@ const defineTasks = (words) => {
   words.forEach((element) => {
     comp += element.progress;
   });
-  console.log(now)
-  console.log(new Date(words[0].nextProgress));
   const arr = words.filter(
     (item) => now.getTime() >= new Date(item.nextProgress).getTime()
   );

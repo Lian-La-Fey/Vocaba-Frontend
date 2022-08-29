@@ -7,8 +7,6 @@ import "./index.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
-console.log(process.env.NODE_ENV);
-
 const token = localStorage.getItem("_accessToken");
 const userPrefences = JSON.parse(localStorage.getItem("userPrefences"));
 if (!userPrefences && !token) {
