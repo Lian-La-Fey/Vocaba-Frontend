@@ -64,12 +64,40 @@
 }
 
 @media (max-width: 1200px) {
+  
+  .navLink svg {
+    position: absolute;
+    right: 0;
+    transform: translateX(10%);
+    transition: transform 230ms ease-in;
+  }
+  
+  .linkText {
+    opacity: 0;
+    transition: opacity 100ms ease-in;
+  }
+  
   .navbar {
-    width: 5rem;
+    -webkit-transform: translateX(-80%);
+    transform: translateX(-80%);
+    transition: transform 230ms ease-in;
   }
   
   .navbar:hover {
-    width: 30rem;
+    -webkit-transform: none;
+    transform: none;
+    transition: transform 330ms ease-out;
+  }
+  
+  .navbar:hover .navLink svg {
+    transform: translateX(-810%);
+    transition: transform 330ms ease-out;
+  }
+  
+  .navbar:hover .linkText {
+    opacity: 1;
+    transition: opacity 130ms ease-out;
+    margin-left: 5rem;
   }
 }
 

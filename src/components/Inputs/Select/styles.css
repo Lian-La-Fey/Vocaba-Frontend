@@ -46,3 +46,6 @@
   padding: 0;
 }
 
+.filter__input-container {
+  color: var(--main-text-color) !important;
+}

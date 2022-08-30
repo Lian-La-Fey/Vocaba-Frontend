@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { FaAngleDown, FaList, FaSignOutAlt, FaUser } from "react-icons/fa";
+import {
+  FaAngleDown,
+  FaList,
+  FaSignOutAlt,
+  FaTimes,
+  FaUser,
+} from "react-icons/fa";
 import { GiProgression } from "react-icons/gi";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
@@ -77,6 +83,9 @@ const ProfileMenu = () => {
                   <span style={{ display: "block", fontWeight: "300" }}>
                     Vocaba Score: {words.length * 10}
                   </span>
+                </div>
+                <div className={`${styles.navbarLink} ms-auto`}>
+                  <FaTimes className="m-0" onClick={turnOff} />
                 </div>
               </div>
             </li>
