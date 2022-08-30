@@ -3,6 +3,7 @@ import axios from "axios";
 import styles from "./styles.module.css";
 import Button from "../../components/Button/Button";
 import { toast } from 'react-toastify';
+import Footer from "../../components/Footer/Footer";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -39,6 +40,7 @@ const ForgotPassword = () => {
           Submit
         </Button>
       </form>
+      <Footer />
     </div>
   );
 };

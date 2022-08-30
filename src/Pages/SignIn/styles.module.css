@@ -4,7 +4,7 @@
     justify-content: center;
     width: 100%;
     padding-top: 20rem;
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
 }
 
 .row {
@@ -124,9 +124,7 @@
         margin: 10px 0;
         cursor: pointer;
     }
-}
-
-@media(max-width: 320px) {
+    
     .imgMaxH {
         margin-top: 0;
         max-height: 35vh;
