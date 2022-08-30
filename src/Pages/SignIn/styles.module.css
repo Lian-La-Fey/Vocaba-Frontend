@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
     width: 100%;
+    padding-top: 20rem;
+    padding-bottom: 10rem;
 }
 
 .row {
@@ -87,14 +88,23 @@
     color: #f0f0f0;
 }
 
+.imgMaxH {
+    margin-top: -2rem;
+    max-height: 50vh;
+}
+
 @media (max-width: 1200px) {
     .imgMaxH {
+        margin-top: 0;
         max-height: 40vh;
     }
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
+    .loginContainer {
+        padding-top: 2.5rem;
+    }
     .title {
         display: none;
     }
@@ -118,6 +128,7 @@
 
 @media(max-width: 320px) {
     .imgMaxH {
+        margin-top: 0;
         max-height: 35vh;
     }
 }

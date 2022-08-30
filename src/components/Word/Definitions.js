@@ -56,24 +56,19 @@ const WordDefinitions = ({ audioSrc1, audioSrc2, meaning }) => {
           </p>
         </>
       )}
-      {meaning.definitions.slice(0, 10).map((definition, idx) => {
-        return (
-          <li className={styles.definition} key={idx + definition}>
-            <p style={{ fontWeight: "600" }}>
-              <input
-                type="radio"
-                name="definition"
-                value={idx}
-                className="me-3"
-                onChange={handleRad}
-              />
-              {definition.definition}
-            </p>
-
-            {definition.example && <p className="ms-5">{definition.example}</p>}
-          </li>
-        );
-      })}
+      {meaning.definitions.slice(0, 10).map((definition, idx) => (
+        <li key={idx + definition}>
+          <input
+            type="radio"
+            name="definition"
+            value={idx}
+            className="me-3"
+            onChange={handleRad}
+          />
+          <span className={styles.definition}>{definition.definition}</span>
+          {definition.example && <p className="ms-5">{definition.example}</p>}
+        </li>
+      ))}
     </ul>
   );
 };
@@ -104,7 +99,7 @@ const WordControl = () => {
   };
 
   return (
-    <div className="container text-center mb-4 d-flex justify-content-center gap-4">
+    <div className={styles.controlWrapper}>
       {words.length > 1 && (
         <Button onClick={prev} minWidth="3.2rem">
           <FaArrowLeft />
@@ -125,13 +120,13 @@ const WordControl = () => {
 const Definitions = () => {
   const { word } = useSelector((state) => ({ ...state.dictionaryWord }));
 
-  const audioUrls = []
-  word.phonetics.forEach(element => {
-    if ( element.audio ) {
-      audioUrls.push(element.audio)
+  const audioUrls = [];
+  word.phonetics.forEach((element) => {
+    if (element.audio) {
+      audioUrls.push(element.audio);
     }
   });
-  
+
   const audioSrc1 = audioUrls[0];
   const audioSrc2 = audioUrls[1];
 

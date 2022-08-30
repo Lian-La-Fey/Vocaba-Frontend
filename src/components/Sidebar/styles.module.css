@@ -19,6 +19,7 @@
   align-items: center;
   height: calc(100vh - 12.5rem);
   position: relative;
+  margin-bottom: 0;
 }
 
 .navItem {

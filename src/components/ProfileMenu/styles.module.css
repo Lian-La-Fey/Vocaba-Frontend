@@ -123,16 +123,19 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
     overflow-x: hidden;
     overflow-y: auto;
-    transition: width 0.5s ease-in-out;
-    width: 0vw;
-  }
-  
-  .open {
+    transition: all 130ms ease-in;
     width: 90vw;
+    -webkit-transform: translateX(103%);
+    transform: translateX(103%);
   }
-  
+
+  .open {
+    -webkit-transform: none;
+    transform: none;
+    transition: all 330ms ease-out;
+  }
+
   .displayMd {
     display: block !important;
   }
-  
 }

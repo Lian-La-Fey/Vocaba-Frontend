@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import pict from "../../img/register.svg";
+import pict from "../../img/join.svg";
 import { toast } from "react-toastify";
 import { FaEnvelope, FaKey, FaUser } from "react-icons/fa";
 import { Col, Container, Form, Image, Row, Spinner } from "react-bootstrap";
@@ -46,7 +46,7 @@ const SignUp = () => {
     <>
       <Container className={styles.loginContainer}>
         <Row className={styles.row}>
-          <Col xl={6} className="d-flex justify-content-center">
+          <Col lg={6} className="d-flex justify-content-center">
             <Image
               className={styles.imgMaxH}
               fluid={true}
@@ -54,7 +54,7 @@ const SignUp = () => {
               alt="register.svg"
             />
           </Col>
-          <Col xl={6}>
+          <Col lg={6}>
             <h2 className={styles.title}>Sign Up</h2>
             <Form onSubmit={handleSubmit} className={styles.loginForm}>
               <div className={styles.inputDiv}>
