@@ -8,6 +8,7 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   z-index: 5;
   background-color: var(--card-bg-color);
+  min-height: 320px;
 }
 
 .navbarNav {
@@ -20,6 +21,7 @@
   height: calc(100vh - 12.5rem);
   position: relative;
   margin-bottom: 0;
+  min-height: 300px;
 }
 
 .navItem {

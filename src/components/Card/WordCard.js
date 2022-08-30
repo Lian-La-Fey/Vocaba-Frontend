@@ -63,7 +63,6 @@ const SynAnt = ({ arr, title }) => {
 const Examples = ({ arr, n }) => {
   const filteredArr = arr.filter((item) => item); // eliminate ''
   const examples = filteredArr.map((item) => `${item}</p>`);
-  console.log(examples);
   return (
     <ul className={styles.examples}>
       {examples.slice(0, n || examples.length).map((example, index) => (
