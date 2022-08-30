@@ -3,8 +3,11 @@
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  gap: 2rem;
   margin-bottom: 2rem;
+}
+
+.wordBtnDiv button:last-child {
+  margin-left: 1rem;
 }
 
 .clipContainer {

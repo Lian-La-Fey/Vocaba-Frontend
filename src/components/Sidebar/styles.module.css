@@ -1,5 +1,7 @@
 .navbar {
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 30rem;
   transition: width .6s ease-in-out;
   height: calc(100vh - 10rem);

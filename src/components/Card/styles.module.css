@@ -77,7 +77,7 @@
 @media (max-height: 670px) {
   
   .definitions {
-    padding-left: 1rem;
+    padding-left: .5rem;
   }
   
   .examples {

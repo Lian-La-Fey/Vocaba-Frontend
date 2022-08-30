@@ -294,7 +294,7 @@ const AddEditWord = () => {
                 </div>
                 <div className="d-flex justify-content-center">
                   <div className="delete-def" onClick={deleteDefinition}>
-                    <FaTrash />
+                    <FaTrash className="me-4"/>
                     <span>Delete Definition</span>
                   </div>
                 </div>

@@ -15,7 +15,7 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useSelector((state) => ({ ...state.user }));
   const token = localStorage.getItem("_accessToken");
   return (
-    <>
+    <main className="d-flex position-relative justify-content-center">
       {token && <Sidebar />}
       {token && user && ( user || !loading) && children}
       {token && loading && !user && (
@@ -24,7 +24,7 @@ const PrivateRoute = ({ children }) => {
         </div>
       )}
       {!token && <LoadingToRedirect />}
-    </>
+    </main>
   );
 };
 

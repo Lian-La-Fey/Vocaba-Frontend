@@ -39,9 +39,12 @@
 
 .clipWrapper {
   display: flex;
-  gap: 1.5rem;
   margin-top: 1rem;
   flex-wrap: wrap;
+}
+
+.clipWrapper div {
+  margin-right: 1.5rem;
 }
 
 .clip {
@@ -62,7 +65,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem ;
+}
+
+.boxWrapper label {
+  margin-right: 1rem;
 }
 
 .box {
@@ -139,7 +145,6 @@
 .delete-def {
   display: flex;
   align-items: center;
-  gap: 1rem;
   cursor: pointer;
   color: var(--main-link-hover-color);
   font-weight: 500;

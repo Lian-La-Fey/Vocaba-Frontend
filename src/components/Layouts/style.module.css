@@ -17,5 +17,6 @@
 @media (max-width: 768px) {
   .content {
     padding: 0 1rem !important;
+    max-height: unset;
   }
 }

@@ -13,8 +13,11 @@
   background-color: var(--card-bg-color);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding: 4rem;
-  gap: 2.5rem;
   min-width: 320px;
+}
+
+.formContainer span {
+  margin: 2rem 0;
 }
 
 .formContainer p {
@@ -23,15 +26,15 @@
 
 .input {
   background-color: #f0f0f0;
-  height: 5rem;
   border-radius: 5rem;
   outline: none;
   border: none;
-  line-height: 1;
+  line-height: 3;
   font-weight: 600;
   font-size: 1.5rem;
   color: #333;
   padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 350px) {
