@@ -3,7 +3,7 @@ import { Spinner } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import Sidebar from "../Sidebar/Sidebar";
 import LoadingToRedirect from "./LoadingToRedirect";
-import './styles.css';
+import "./styles.css";
 
 const PrivateRoute = ({ children }) => {
   const style = {
@@ -15,16 +15,18 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useSelector((state) => ({ ...state.user }));
   const token = localStorage.getItem("_accessToken");
   return (
-    <main className="d-flex position-relative justify-content-center">
-      {token && <Sidebar />}
-      {token && user && ( user || !loading) && children}
-      {token && loading && !user && (
-        <div className="spinnerWrapper">
-          <Spinner style={style} animation="border" role="status" />
-        </div>
-      )}
+    <>
+      <main className="d-flex position-relative justify-content-center">
+        {token && <Sidebar />}
+        {token && user && (user || !loading) && children}
+        {token && loading && !user && (
+          <div className="spinnerWrapper">
+            <Spinner style={style} animation="border" role="status" />
+          </div>
+        )}
+      </main>
       {!token && <LoadingToRedirect />}
-    </main>
+    </>
   );
 };
 

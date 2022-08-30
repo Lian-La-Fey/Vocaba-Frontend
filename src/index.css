@@ -15,11 +15,11 @@
   --sec-link-hover-color: hsl(243, 85%, 69%);
   --main-headings-color: #435065;
   --main-skeleton-bg-color: #ddd;
-  --ck-color-text: var(--main-link-color);
-  --ck-color-base-foreground: #f9f9fa;
-  --ck-color-toolbar-background: #f9f9fa;
-  --ck-color-button-default-hover-background: #e6e6e6;
-  --ck-color-button-default-active-background: #d9d9d9;
+  --ck-color-text: var(--main-link-color) !important;
+  --ck-color-base-foreground: #f9f9fa !important;
+  --ck-color-toolbar-background: #f9f9fa !important;
+  --ck-color-button-default-hover-background: #e6e6e6 !important;
+  --ck-color-button-default-active-background: #d9d9d9 !important;
   --ck-z-modal: calc(var(--ck-z-default) + 10);
 }
 
@@ -40,14 +40,14 @@
   --main-skeleton-bg-color: #4b4b4b;
   --toastify-color-light: var(--main-bg-color);
   --toastify-text-color-light: var(--main-text-color);
-  --ck-color-text: var(--main-link-color);
-  --ck-color-base-foreground: #282828;
-  --ck-color-toolbar-background: #282828;
-  --ck-color-button-default-hover-background: #373737;
-  --ck-color-button-default-active-background: #545454;
-  --ck-color-button-on-background: #373737;
-  --ck-color-button-on-hover-background: #545454;
-  --ck-color-button-on-active-background: hsl(243, 30%, 27%);
+  --ck-color-text: var(--main-link-color) !important;
+  --ck-color-base-foreground: #282828 !important;
+  --ck-color-toolbar-background: #282828 !important;
+  --ck-color-button-default-hover-background: #373737 !important;
+  --ck-color-button-default-active-background: #545454 !important;
+  --ck-color-button-on-background: #373737 !important;
+  --ck-color-button-on-hover-background: #545454 !important;
+  --ck-color-button-on-active-background: hsl(243, 30%, 27%) !important;
 }
 
 * {

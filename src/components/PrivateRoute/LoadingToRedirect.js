@@ -16,23 +16,25 @@ const LoadingToRedirect = () => {
     return () => clearInterval(interval);
   }, [count, navigate]);
   return (
-    <div className="d-flex flex-column justify-content-center mt-5">
-      <h1 className="text-center mb-5">You must be logged-in to do that.</h1>
-      <Image
-        src={pict}
-        alt="redirect.svg"
-        fluid
-        style={{ maxHeight: "380px", padding: "2rem" }}
-      />
-      <h2 className="text-center mt-5">
-        Redirecting you in
-        <span className="mx-2" style={{ color: "var(--main-link-color)" }}>
-          {count}
-        </span>
-        seconds
-      </h2>
+    <>
+      <div className="d-flex flex-column justify-content-center mt-5">
+        <h1 className="text-center mb-5">You must be logged-in to do that.</h1>
+        <Image
+          src={pict}
+          alt="redirect.svg"
+          fluid
+          style={{ maxHeight: "380px", padding: "2rem" }}
+        />
+        <h2 className="text-center mt-5">
+          Redirecting you in
+          <span className="mx-2" style={{ color: "var(--main-link-color)" }}>
+            {count}
+          </span>
+          seconds
+        </h2>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

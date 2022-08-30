@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 30rem;
-  transition: width .6s ease-in-out;
+  transition: width .3s;
   height: calc(100vh - 10rem);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   z-index: 5;
@@ -25,7 +25,6 @@
 .navItem {
   width: 100%;
   cursor: pointer;
-  transition: all 200ms ease-in-out;
 }
 
 .navItem:last-child {
@@ -39,7 +38,7 @@
   height: 5rem;
   color: var(--sec-link-color);
   text-decoration: none;
-  transition: .3s;
+  transition: color .3s;
   border: none;
   background: none;
   overflow: hidden;

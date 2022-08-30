@@ -11,7 +11,6 @@
   border: 0 0 0 0 !important;
   border-bottom: 2px solid var(--main-link-hover-color) !important;
   padding: 0 !important;
-  /* padding-bottom: 1rem !important; */
 }
 
 .ck-content p {
@@ -29,14 +28,12 @@
   height: 1.2rem;
   position: absolute;
   left: 0;
-  /* padding-right: 1rem; */
 }
 
-/* .ck-balloon-rotator__content,
-.ck .ck-balloon-rotator,
-.ck.ck-balloon-panel {
-  background: var(--ck-color-base-foreground) !important;
-} */
+.ck-rounded-corners .ck.ck-editor__editable:not(.ck-editor__nested-editable),
+.ck.ck-editor__editab {
+  box-shadow: none !important;
+}
 
 .ck.ck-balloon-panel.ck-toolbar-container[class*="arrow_n"]:after {
   border-bottom-color: var(--ck-color-base-foreground);
