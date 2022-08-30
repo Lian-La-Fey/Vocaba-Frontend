@@ -1,6 +1,6 @@
 .ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
-  border: none;
-  box-shadow: none;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .ck.ck-editor__editable_inline {
@@ -40,4 +40,8 @@
 }
 .ck.ck-balloon-panel.ck-toolbar-container[class*="arrow_s"]:after {
   border-top-color: var(--ck-color-base-foreground);
+}
+
+.ck-reset_all :not(.ck-reset_all-excluded *), .ck.ck-reset_all {
+  color: var(--main-link-color) !important;
 }

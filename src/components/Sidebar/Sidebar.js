@@ -23,7 +23,6 @@ const Sidebar = () => {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.navbarNav}>
-        <li className={styles.navItem}></li>
         <li className={styles.navItem}>
           <Link to="/profile" className={styles.navLink}>
             <FaUser />
