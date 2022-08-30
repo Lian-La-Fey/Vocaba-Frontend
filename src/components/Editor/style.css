@@ -1,5 +1,5 @@
 .ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
-  border: none !important;
+  border: none;
   box-shadow: none !important;
 }
 
