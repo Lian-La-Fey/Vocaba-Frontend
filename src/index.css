@@ -21,6 +21,8 @@
   --ck-color-button-default-hover-background: #e6e6e6 !important;
   --ck-color-button-default-active-background: #d9d9d9 !important;
   --ck-z-modal: calc(var(--ck-z-default) + 10);
+  scrollbar-width: thin;
+  scrollbar-color: var(--sec-link-hover-color) var(--main-border-color);
 }
 
 .darkTheme {
@@ -48,12 +50,15 @@
   --ck-color-button-on-background: #373737 !important;
   --ck-color-button-on-hover-background: #545454 !important;
   --ck-color-button-on-active-background: hsl(243, 30%, 27%) !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sec-link-hover-color) var(--main-border-color);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 
 html {
@@ -99,6 +104,7 @@ input:-internal-autofill-selected {
 
 /* Track */
 ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -109,6 +115,7 @@ input:-internal-autofill-selected {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: rgba(204, 103, 255, 0.4);
+  box-shadow: inset 0 0 6px rgba(114, 76, 76, 0.5);
   -webkit-box-shadow: inset 0 0 6px rgba(114, 76, 76, 0.5);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
