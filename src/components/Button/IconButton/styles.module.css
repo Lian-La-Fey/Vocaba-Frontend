@@ -10,9 +10,12 @@
   margin-left: 1rem;
   cursor: pointer;
   color: var(--main-text-color);
+  opacity: .6;
   pointer-events: none;
+  transition: all .2s;
 }
 
 .btnIcon:hover svg {
-  color: #8079fc;
+  opacity: 1;
+  color: var(--main-link-color);
 }

@@ -7,9 +7,9 @@
 }
 
 .modal-header {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .modal-footer {
-  border-top: none;
+  border-top: none !important;
 }

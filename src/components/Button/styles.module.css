@@ -20,7 +20,7 @@
 }
 
 .btn:hover {
-  background-color: #6c63ff;
+  background-color: var(--main-link-hover-color);
   color: #fff;
 }
 

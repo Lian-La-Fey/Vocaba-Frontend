@@ -49,41 +49,6 @@
   font-size: 1.6rem !important;
 }
 
-.searchBtn {
-  color: #6c63ff;
-  border: none;
-  background: #fff;
-}
-
-.searchDiv {
-  position: relative;
-}
-
-.searchInput {
-  height: 5rem;
-  padding-left: 4rem;
-  padding-right: 1rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.75;
-  display: block;
-  width: 100%;
-  outline: 0;
-  border: 0;
-  border-bottom: 2px solid #6c63ff !important;
-  background-color: var(--card-bg-color);
-  color: var(--main-text-color);
-}
-
-.searchInpIcon {
-  position: absolute;
-  top: calc(50% - 0.5625rem);
-  left: 1rem;
-  pointer-events: none;
-  color: var(--main-link-hover-color);
-}
-
-
 @media (max-width: 768px) {
   .hide {
     display: none;

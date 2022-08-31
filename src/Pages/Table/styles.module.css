@@ -33,40 +33,6 @@
   width: 2rem;
 }
 
-.newInput {
-  border: none;
-  border-bottom: 2px solid #6c63ff;
-  outline: 0;
-  color: var(--main-text-color);
-  background-color: var(--card-bg-color);
-}
-
-.addBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3.2rem;
-  color: #FFF;
-  font-size: 2.4rem;
-  margin-left: 1rem;
-  border-radius: 50%;
-  border: none;
-  background: #6c63ff;
-}
-
-.listFormIcon {
-  height: 1.6rem;
-  width: 1.6rem;
-  margin-left: 1rem;
-  cursor: pointer;
-  color: var(--main-text-color);
-}
-
-.listFormIcon:hover {
-  color: #8079fc;
-}
-
 .listText {
   color: var(--main-text-color);
   cursor: pointer;
@@ -133,6 +99,6 @@
   }
   
   .tableCardHeader {
-    padding-right: .5rem;
+    padding-right: 1rem;
   }
 }

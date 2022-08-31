@@ -14,8 +14,10 @@ import IconButton from "../../components/Button/IconButton/IconButton";
 import Modal from "../../components/Modal/MyModal";
 import { getWords } from "../../redux/features/wordSlice";
 import { deleteWords } from "../../utilities/cleanFirebaseStorage";
+import Button from "../../components/Button/Button";
+import Search from "../../components/Inputs/TextField/Search/Search";
 
-const Table = () => {
+const Table = ({ lists }) => {
   const { user, error } = useSelector((state) => ({ ...state.user }));
   const { words } = useSelector((state) => ({ ...state.word }));
   const dispatch = useDispatch();
@@ -28,13 +30,13 @@ const Table = () => {
   });
 
   useEffect(() => {
-    dispatch(getWords({ toast, userId: user._id }));
+    dispatch(getWords({ userId: user._id }));
   }, [user.lists, dispatch, user._id]);
 
   const submitListDelete = (event) => {
     event.preventDefault();
     const list = listDelete.list;
-    dispatch(deleteList({ id: user._id, list, toast, navigate }));
+    dispatch(deleteList({ id: user._id, list, navigate }));
     const listWords = words.filter(
       (word) => word.lists.includes(listDelete.list) && word.lists.length === 1
     );
@@ -48,7 +50,7 @@ const Table = () => {
     if (newName.length > 0) {
       if (!user.lists.includes(newName)) {
         dispatch(
-          changeList({ id: user._id, oldName, newName, toast, navigate })
+          changeList({ id: user._id, oldName, newName, navigate })
         );
         setNameChange({ modal: false, oldName: "", newName: "" });
       } else {
@@ -79,7 +81,7 @@ const Table = () => {
             </td>
             <td className={styles.tablePadding}></td>
           </tr>
-          {user.lists.map((list, index) => (
+          {lists.map((list, index) => (
             <tr key={index}>
               <td className={styles.tablePadding}>{index + 1}</td>
               <td className={styles.tablePadding}>
@@ -141,16 +143,21 @@ export const Lists = () => {
   const { user } = useSelector((state) => ({ ...state.user }));
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [newList, setNewList] = useState("");
+  const [newList, setNewList] = useState({
+    modal: false,
+    name: ""
+  });
+  const [search, setSearch] = useState("");
 
-  const handleSubmitNewList = (event) => {
+  const submitNewList = (event) => {
     event.preventDefault();
-    if (newList.length > 0) {
-      if (!user.lists.includes(newList)) {
+    const { name } = newList
+    if (name.length > 0) {
+      if (!user.lists.includes(name)) {
         dispatch(
-          createList({ id: user._id, newList: newList, toast, navigate })
+          createList({ id: user._id, newList: name, navigate })
         );
-        setNewList("");
+        setNewList({ modal: false, namme: "" })
       } else {
         toast.error("You have already a list given name");
       }
@@ -167,23 +174,56 @@ export const Lists = () => {
             <FaList className="me-4" />
             My Lists
           </h2>
-          <form className={styles.newListForm} onSubmit={handleSubmitNewList}>
-            <input
-              type="text"
-              placeholder="New List"
-              className={styles.newInput}
-              value={newList}
-              onChange={(e) => setNewList(e.target.value)}
+          <div className="d-flex align-items-center">
+            <Search
+              placeholder="Search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              style={{
+                height: "4rem",
+                border: "0",
+                border: "2px solid var(--main-border-color)",
+                borderRadius: ".5rem",
+              }}
             />
-            <button className={styles.addBtn} type="submit">
-              +
-            </button>
-          </form>
+            <Button
+              style={{
+                marginTop: "0",
+                marginLeft: "1rem",
+                borderRadius: ".5rem",
+                height: "4rem",
+                borderWidth: "2px",
+              }}
+              onClick={() => setNewList({ ...newList, modal: true })}
+            >
+              New List
+            </Button>
+          </div>
         </div>
         <div className={styles.tableCardBody}>
-          <Table />
+          <Table
+            lists={user.lists.filter((e) =>
+              e.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+            )}
+          />
         </div>
       </div>
+      <Modal
+        title="New List"
+        btnName="Create"
+        state={newList}
+        setState={setNewList}
+        submitAction={submitNewList}
+      >
+        <input
+          type="text"
+          defaultValue={newList.name}
+          className="form-control"
+          onChange={(e) =>
+            setNewList({ ...newList, name: e.target.value })
+          }
+        />
+      </Modal>
     </Content>
   );
 };

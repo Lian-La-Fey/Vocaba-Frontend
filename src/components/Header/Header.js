@@ -8,6 +8,7 @@ import ProfileMenu from "../ProfileMenu/ProfileMenu";
 import { getWords, setEmpty } from "../../redux/features/dictionaryWordSlice";
 import { toast } from "react-toastify";
 import SkeletonProfile from "../../skeletons/SkeletonProfile";
+import Search from "../Inputs/TextField/Search/Search";
 
 const Header = () => {
   const token = localStorage.getItem("_accessToken");
@@ -23,11 +24,11 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(setEmpty())
+    dispatch(setEmpty());
     if (wordName) {
       dispatch(getWords({ wordName, navigate, toast }));
     }
-    setWordName("")
+    setWordName("");
   };
 
   return (
@@ -43,16 +44,11 @@ const Header = () => {
       </div>
       <div className={styles.headerItem}>
         <Form className="d-flex" onSubmit={handleSubmit}>
-          <div className={styles.searchDiv}>
-            <input
-              type="text"
-              placeholder="Dictionary"
-              className={styles.searchInput}
-              value={wordName}
-              onChange={handleSearch}
-            />
-            <FaSearch className={styles.searchInpIcon} />
-          </div>
+          <Search
+            placeholder="Dictionary"
+            value={wordName}
+            onChange={handleSearch}
+          />
         </Form>
       </div>
       <div className={`${styles.headerItem} ${styles.dropdown}`}>
