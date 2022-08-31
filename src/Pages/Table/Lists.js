@@ -181,7 +181,6 @@ export const Lists = () => {
               onChange={(e) => setSearch(e.target.value)}
               style={{
                 height: "4rem",
-                border: "0",
                 border: "2px solid var(--main-border-color)",
                 borderRadius: ".5rem",
               }}

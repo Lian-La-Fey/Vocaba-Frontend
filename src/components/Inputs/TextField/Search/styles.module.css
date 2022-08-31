@@ -1,0 +1,79 @@
+.searchDiv {
+  position: relative;
+}
+
+.searchDiv input {
+  height: 5rem;
+  padding-left: 4rem;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.75;
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid var(--main-link-color);
+  background-color: var(--card-bg-color);
+  color: var(--main-text-color);
+  transition: all 0.2s;
+}
+
+.searchDiv svg {
+  position: absolute;
+  top: calc(50% - 0.7625rem);
+  left: 1rem;
+  pointer-events: none;
+  color: var(--main-link-hover-color);
+}
+
+.searchDiv input:focus {
+  border-color: var(--main-link-hover-color) !important;
+}
+
+@media (max-width: 576px) {
+  .mob {
+    position: absolute;
+    right: 6.25%;
+    z-index: 5;
+  }
+  
+  .mob input {
+    width: 55%;
+  }
+  
+  .mob input:focus {
+    width: 105%;
+  }
+}
+
+
+
+@media (max-width: 360px) {
+  .mob {
+    right: 1.5%;
+  }
+  
+  .mob input {
+    width: 45%;
+  }
+  
+  .mob input:focus {
+    width: 95%;
+  }
+}
+
+@media (max-width: 325px) {
+  .mob {
+    width: 45%;
+    right: calc(17.5rem - 40vw);
+  }
+    
+  .mob input {
+    width: 12.5%;
+  }
+  
+  .mob input:focus {
+    width: 100%;
+  }
+}
