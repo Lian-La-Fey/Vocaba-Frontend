@@ -73,3 +73,9 @@
   margin-bottom: 0;
   opacity: .95;
 }
+
+@media(max-width: 576px) {
+  .definitions {
+    padding-left: .5rem;
+  }
+}
