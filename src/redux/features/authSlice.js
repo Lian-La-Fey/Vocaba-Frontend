@@ -7,7 +7,7 @@ export const login = createAsyncThunk(
     async ({ formValue, navigate }, { rejectWithValue }) => {
         try {
             const response = await api.login(formValue);
-            navigate("/");
+            navigate("/lists");
             return response.data;
         } catch (error) {
             toast.error(error.response.data.message, { autoClose: 5500});
