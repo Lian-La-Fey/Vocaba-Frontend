@@ -5,9 +5,10 @@ import styles from "../ForgotPassword/styles.module.css";
 import NotFound from "../NotFound/NotFound";
 import { toast } from "react-toastify";
 import Button from "../../components/Button/Button";
+import Footer from "../../components/Footer/Footer";
 
 const ResetPassword = () => {
-  const [validUrl, setValidUrl] = useState(false);
+  const [validUrl, setValidUrl] = useState(true);
   const [pass, setPass] = useState({ newPass: "", confPass: "" });
   const param = useParams();
   const url = `${process.env.REACT_APP_API_URL}/users/reset-password/${param.id}/${param.token}`;
@@ -73,6 +74,7 @@ const ResetPassword = () => {
             />
             <Button type="submit">Submit</Button>
           </form>
+        <Footer />
         </div>
       ) : (
         <NotFound />
