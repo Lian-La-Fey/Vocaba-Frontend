@@ -34,16 +34,17 @@
 @media (max-width: 576px) {
   .mob {
     position: absolute;
-    right: 6.25%;
+    left: -100%;
     z-index: 5;
+    width: 100%;
   }
   
   .mob input {
-    width: 55%;
+    width: 100%;
   }
   
   .mob input:focus {
-    width: 105%;
+    width: 200%;
   }
 }
 
@@ -51,29 +52,28 @@
 
 @media (max-width: 360px) {
   .mob {
-    right: 1.5%;
+    left: -70%;
   }
   
   .mob input {
-    width: 45%;
+    width: 70%;
   }
   
   .mob input:focus {
-    width: 95%;
+    width: 170%;
   }
 }
 
-@media (max-width: 325px) {
+@media (max-width: 320px) {
   .mob {
-    width: 45%;
-    right: calc(17.5rem - 40vw);
+    left: -40%;
   }
-    
+  
   .mob input {
-    width: 12.5%;
+    width: 40%;
   }
   
   .mob input:focus {
-    width: 100%;
+    width: 140%;
   }
 }
