@@ -54,12 +54,12 @@ const AddEditWord = () => {
   const uploadVideo = (e) => {
     e.preventDefault();
     if (videoUpload === null) return;
-    if (videoUpload.size > 2097152) {
+    if (videoUpload.size > 3145728) {
       const _size = byteToUnit(videoUpload.size);
       toast.error(
         `
         Error uploading file: File is too big (${_size}).
-        Max filesize: 2.0 MB`,
+        Max filesize: 3.0 MB`,
         { autoClose: 5000 }
       );
       return;
