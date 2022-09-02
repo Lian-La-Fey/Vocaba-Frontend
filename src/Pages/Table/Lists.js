@@ -174,7 +174,7 @@ export const Lists = () => {
             <FaList className="me-4" />
             My Lists
           </h2>
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center position-relative">
             <Search
               placeholder="Search"
               value={search}
